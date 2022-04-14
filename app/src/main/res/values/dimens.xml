@@ -3,5 +3,6 @@
     <!--TODO(Step 2 - Defining the dimension for MainLayout padding.)-->
     <!--START-->
     <dimen name="main_screen_main_layout_padding">5dp</dimen>
+    <dimen name="default_button_text_size">22sp</dimen>
     <!--END-->
 </resources>
