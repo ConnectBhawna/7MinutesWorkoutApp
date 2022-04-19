@@ -9,7 +9,10 @@ import android.provider.MediaStore
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
+import android.widget.GridLayout
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.a7minutesworkout.databinding.ActivityExerciseBinding
 import com.example.a7minutesworkout.databinding.ActivityMainBinding
 import java.util.*
@@ -31,6 +34,8 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var tts: TextToSpeech? = null
     private var player:MediaPlayer? = null
 
+    private var exerciseAdapter : ExerciseStatusAdapter? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityExerciseBinding.inflate(layoutInflater)
@@ -50,7 +55,19 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
 
         setupRestView()
+        setUpExerciseStatusRecyclerView()
     }
+    /**
+     * Function is used to set the recycler View at the bottom of the exercise
+     */
+    private fun setUpExerciseStatusRecyclerView(){
+          binding?.rvExerciseStatus?.layoutManager =
+              LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+
+          exerciseAdapter = ExerciseStatusAdapter(exerciseList!!)
+          binding?.rvExerciseStatus?.adapter = exerciseAdapter
+    }
+
 
     /**
      * Function is used to set the timer for REST.
