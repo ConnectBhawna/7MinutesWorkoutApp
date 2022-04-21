@@ -9,6 +9,17 @@ import java.math.BigDecimal
 import java.math.RoundingMode
 
 class BMIActivity : AppCompatActivity() {
+
+    // TODO : Added variables for METRIC and US UNITS views and a variable for displaying the current selected view..)
+    companion object {
+        private const val METRIC_UNITS_VIEW = "METRIC_UNIT_VIEW" // Metric Unit View
+        private const val US_UNITS_VIEW = "US_UNIT_VIEW" // US Unit View
+    }
+
+    private var currentVisibleView: String =
+        METRIC_UNITS_VIEW // A variable to hold a value to make a selected view visible
+
+
     //Todo : create binding for the activity
     private var binding: ActivityBmiBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +36,20 @@ class BMIActivity : AppCompatActivity() {
         supportActionBar?.title = "CALCULATE BMI" // Setting a title in the action bar.
         binding?.toolbarBmiActivity?.setNavigationOnClickListener {
             onBackPressed()
+        }
+
+        makeVisibleMetricUnitsView()
+
+        // TODO: Adding a check change listener to the radio group and according to the radio button.)
+        // Radio Group change listener is set to the radio group which is added in XML.
+        //we use _ for the first value because we don't need it
+        binding?.rgUnits?.setOnCheckedChangeListener { _, checkedId: Int ->
+            // Here if the checkId is METRIC UNITS view then make the view visible else US UNITS view.
+            if (checkedId == R.id.rbMetricUnits) {
+                makeVisibleMetricUnitsView()
+            } else {
+                makeVisibleUsUnitsView()
+            }
         }
 
         // TODO(Step 3 : Adding a click event to METRIC UNIT Calculate button and after valid input calculating it.)
@@ -51,6 +76,43 @@ class BMIActivity : AppCompatActivity() {
                     .show()
             }
         }
+    }
+
+    // TODO : Making a function to make the METRIC UNITS view visible.)
+    // START
+    /**
+     * Function is used to make the METRIC UNITS VIEW visible and hide the US UNITS VIEW.
+     */
+    private fun makeVisibleMetricUnitsView() {
+        currentVisibleView = METRIC_UNITS_VIEW // Current View is updated here.
+        binding?.tilMetricUnitWeight?.visibility = View.VISIBLE // METRIC  Height UNITS VIEW is Visible
+        binding?.tilMetricUnitHeight?.visibility = View.VISIBLE // METRIC  Weight UNITS VIEW is Visible
+        binding?.tilUsMetricUnitWeight?.visibility = View.GONE // make weight view Gone.
+        binding?.tilMetricUsUnitHeightFeet?.visibility = View.GONE // make height feet view Gone.
+        binding?.tilMetricUsUnitHeightInch?.visibility = View.GONE // make height inch view Gone.
+
+        binding?.etMetricUnitHeight?.text!!.clear() // height value is cleared if it is added.
+        binding?.etMetricUnitWeight?.text!!.clear() // weight value is cleared if it is added.
+
+        binding?.llDiplayBMIResult?.visibility = View.INVISIBLE
+    }
+
+
+    // TODO : Making a function to make the US UNITS view visible.)
+    // START
+    private fun makeVisibleUsUnitsView() {
+        currentVisibleView = US_UNITS_VIEW // Current View is updated here.
+        binding?.tilMetricUnitHeight?.visibility = View.INVISIBLE // METRIC  Height UNITS VIEW is InVisible
+        binding?.tilMetricUnitWeight?.visibility = View.INVISIBLE // METRIC  Weight UNITS VIEW is InVisible
+        binding?.tilUsMetricUnitWeight?.visibility = View.VISIBLE // make weight view visible.
+        binding?.tilMetricUsUnitHeightFeet?.visibility = View.VISIBLE // make height feet view visible.
+        binding?.tilMetricUsUnitHeightInch?.visibility = View.VISIBLE // make height inch view visible.
+
+        binding?.etUsMetricUnitWeight?.text!!.clear() // weight value is cleared.
+        binding?.etUsMetricUnitHeightFeet?.text!!.clear() // height feet value is cleared.
+        binding?.etUsMetricUnitHeightInch?.text!!.clear() // height inch is cleared.
+
+        binding?.llDiplayBMIResult?.visibility = View.INVISIBLE
     }
 
     // TODO : Validating the METRIC UNITS CALCULATION input.)
