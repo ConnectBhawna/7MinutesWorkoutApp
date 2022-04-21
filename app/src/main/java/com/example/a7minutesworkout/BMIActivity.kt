@@ -55,7 +55,7 @@ class BMIActivity : AppCompatActivity() {
         binding?.btnCalculateUnits?.setOnClickListener {
             calculateUnits()
         }
-        
+
     }
 
     // TODO : Making a function to make the METRIC UNITS view visible.)
