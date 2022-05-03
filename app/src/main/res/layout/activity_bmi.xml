@@ -14,7 +14,7 @@
         android:background="@color/white"/>
 
     <!--TODO: Adding radio selection for METRIC and US Units.)-->
-    <!--START-->
+
     <RadioGroup
         android:id="@+id/rgUnits"
         android:layout_width="match_parent"

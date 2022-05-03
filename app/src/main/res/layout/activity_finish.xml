@@ -63,7 +63,8 @@
         android:background="@color/colorAccent"
         android:text="FINISH"
         android:textColor="#AEDB79"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck" />
 
 
 </LinearLayout>
