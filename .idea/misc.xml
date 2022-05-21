@@ -15,6 +15,7 @@
         <entry key="app/src/main/res/drawable/item_circular_color_accent_border.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/item_circular_color_gray_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/item_color_accent_border_ripple_background.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/item_history_row.xml" value="0.2570052539404553" />
         <entry key="app/src/main/res/layout/activity_bmi.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_exercise.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_finish.xml" value="0.22" />
@@ -22,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/dialog_custom_back_confirmation.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_exercise_status.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/item_history_row.xml" value="0.18" />
       </map>
     </option>
   </component>
