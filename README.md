@@ -4,7 +4,7 @@
  Modern Android Application with MVVM architecture.
 <br>
   
-<h2> :collision: Problem Statement: </h2>
+<h2> :collision: Problem it solvest: </h2>
 <p>As we all know in this busy life where all of us are busy not able to give time to our body or Workout.First and the foremost reason to being sick is not taking good diet or having exercise on daily basis. So caring or taking of body just like different non living things is also necessary.One of the problem faced by the people is that they are not able to remind that at what time we have to do exercise or check BMI.This gives us many issues </p>
 
 <h2> :fire: Proposed Solution</h2>
@@ -29,6 +29,12 @@
 
 ## :sweat_drops: Prerequisite
 * Android Studio installed in your system.
+
+<h2> :fire: Problem i faced</h2>
+<p>  First of all, I want to thank HackMoreish team to organize this beautiful hackathon and to give me the oppurtunity to learn and build my App. Before this hackathon i din't knew much about Backend stuff and storag. But after joining it i spend a lot of time to research and figure out how to build APP.
+
+
+ </p>
 
 
 ## :heartpulse: Find this repository useful?
