@@ -8,7 +8,7 @@
 <p>As we all know in this busy life where all of us are busy not able to give time to our body or Workout.First and the foremost reason to being sick is not taking good diet or having exercise on daily basis. So caring or taking of body just like different non living things is also necessary.One of the problem faced by the people is that they are not able to remind that at what time we have to do exercise or check BMI.This gives us many issues </p>
 
 <h2> :fire: Proposed Solution</h2>
-<p>  This project i.e. 7MimutesWorkout App helps the user to remind about the exercise as per the problem that you are facing or check BMI also record the history of your workout show it to the user for reference. This app also helps the user to search about the exercise as per you body issues like REST API.
+<p>  This appplication was built using Kotlin and is styled with Xml. The application is a simple workout App that helps you in making the habit of doing exercise in just 7 minutes. This is a mobile responsive recreation and features Email/Auth for authentication. Users may choose to be authenticated with either a Email or a Google account. A few features to note with this project are Exercise just after 7 minutes using the Image components.
  </p>
  
  ## 💻 Techs Used 
